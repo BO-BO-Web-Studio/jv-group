@@ -1,0 +1,92 @@
+@import "src/styles/variables";
+@import "src/styles/_mixins.scss";
+
+.partners {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  background: $secondary-bg-white;
+  @include laptop {
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 328px;
+  margin: 40px 0;
+  @include tablet {
+    width: 592px;
+    margin: 50px 0;
+  }
+  @include laptop {
+    width: 1200px;
+    margin: 150px 0;
+  }
+}
+
+.swiper {
+  width: 100%;
+}
+
+.h1 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  margin: 0 0 16px;
+  color: #0a314a;
+  background: (linear-gradient(84.16deg, #1b81bf -21.04%, #0a314a 104.92%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  @include tablet {
+    font-size: 32px;
+    line-height: 48px;
+    margin: 0 0 20px;
+  }
+  @include tablet {
+    font-size: 40px;
+    line-height: 60px;
+    margin: 0 0 40px;
+  }
+}
+
+.mySwiper {
+  overflow: visible !important;
+  :global(.swiper-wrapper) {
+    padding-bottom: 50px;
+  }
+}
+
+.slide {
+  width: 200px;
+  height: 80px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 8px 15px 15px 0px #1b81bf1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include tablet {
+    width: 153px;
+    height: 100px;
+  }
+  @include laptop {
+    width: 300px;
+    height: 150px;
+  }
+}
+
+.img {
+  width: 100px;
+  @include tablet {
+    width: 108px;
+  }
+  @include laptop {
+    width: 180px;
+  }
+}

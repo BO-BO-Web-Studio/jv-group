@@ -1,0 +1,128 @@
+@import "src/styles/variables";
+@import "src/styles/_mixins.scss";
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: $secondary-bg-white;
+  @include laptop {
+  }
+}
+
+.wrapper {
+  width: 328px;
+
+  @include tablet {
+    width: 592px;
+  }
+  @include laptop {
+    width: 1200px;
+  }
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  @include tablet {
+    margin-top: 50px;
+  }
+  @include laptop {
+    flex-direction: row;
+    margin-top: 100px;
+  }
+}
+
+.title {
+  font-size: 24px;
+  padding: 20px 16px;
+  line-height: 36px;
+  background: white;
+  box-shadow: 0px 10px 20px 0px #1b81bf14;
+  color: #0a314a;
+  background: (linear-gradient(84.16deg, #1b81bf -21.04%, #0a314a 104.92%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+
+  @include tablet {
+    padding: 24px 48px 24px 24px;
+    font-size: 32px;
+    line-height: 48px;
+  }
+  @include laptop {
+    padding: 23px 45px 23px 123px;
+    margin: 0;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 60px;
+  }
+}
+
+.paragraph {
+  opacity: 70%;
+  color: #141414;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  @include laptop {
+    margin-left: 204px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.grid {
+  color: #4c485b;
+  margin: 30px 0 40px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  @include tablet {
+    margin: 50px 0 50px 0;
+  }
+  @include laptop {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 120px 0 100px 0;
+  }
+}
+.image {
+  padding: 20px;
+  background: $secondary-bg;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include tablet{
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.paragraphAbout {
+  opacity: 90%;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  @include tablet{
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @include tablet{
+    font-size: 22px;
+    line-height: 33px;
+
+  }
+}
+
+.bg1 {
+  background-image: url("../../../public/assets/img/№1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}

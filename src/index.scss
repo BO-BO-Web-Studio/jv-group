@@ -1,0 +1,9 @@
+@import "src/styles/variables";
+@import "src/styles/_mixins.scss";
+@import url("https://fonts.googleapis.com/css2?family=Syne&display=swap");
+
+body {
+  margin: 0;
+  color: $primary-text-white;
+  font-family: "Syne", sans-serif;
+}

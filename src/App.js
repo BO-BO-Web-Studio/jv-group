@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import About from "./components/about/About";
+import Consultation from "./components/consultation/Consultation";
+import Contacts from "./components/contacts/Contacts";
+import Footer from "./components/footer/Footer";
+import Header from "./components/header/Header";
+import MainBaner from "./components/mainBaner/MainBaner";
+import Partners from "./components/partners/Partners";
+import Project from "./components/project/Project";
+import Reviews from "./components/reviews/Reviews";
+import SpareParts from "./components/spareParts/SpareParts";
+import TypeOfElevators from "./components/typeOfElevators/TypeOfElevators";
+import YouTube from "./components/youTube/YouTube";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <MainBaner />
+      <About/>
+      <TypeOfElevators/>
+      <Consultation/>
+      <Project/>
+      <Partners/>
+      {/* <SpareParts/> */}
+      <YouTube/>
+      <Reviews/>
+      <Contacts/>
+      <Footer/>
     </div>
   );
 }

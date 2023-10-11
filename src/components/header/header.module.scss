@@ -1,0 +1,146 @@
+@import "src/styles/variables";
+@import "src/styles/_mixins.scss";
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: $primary-bg;
+  position: fixed;
+  z-index: 2;
+  @include laptop {
+  }
+}
+.wrapperMobail {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  width: 328px;
+  padding: 16px 0; cursor: pointer;
+  @include tablet {
+    flex-direction: row;
+width: 592px;
+    padding: 24px 0;
+  }
+  @include laptop {
+    width: 1200px;
+    padding: 40px 0;
+  }
+}
+
+.burger {
+  display: flex;
+
+  @include laptop {
+    display: none;
+  }
+}
+
+.logo {
+  width: 100px;
+  @include tablet {
+    width: 134px;
+  }
+  @include laptop {
+    width: 160px;
+  }
+}
+.about {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  @include laptop {
+    justify-content: center;
+    align-items: center;
+  }
+}
+p {
+  margin: 0;
+}
+
+.catalog{
+margin: 5px 0 0;
+}
+.down {
+  display: none;
+  @include laptop {
+    display: inline;
+    margin-left: 8px;
+  }
+}
+.text {
+  display: none;
+  font-family: "Syne", sans-serif;
+
+  @include laptop {
+    display: flex;
+    opacity: 80%;
+    gap: 40px;
+    font-weight: 400;
+    line-height: 19px;
+  }
+}
+.textMobail {
+  display: flex;
+  flex-direction: column;
+  font-family: "Syne", sans-serif;
+  opacity: 80%;
+  gap: 10px;
+  font-weight: 400;
+  line-height: 19px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  @include laptop {
+    display: none;
+  }
+}
+.open {
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+  margin-top: 4px;
+  background-color: $primary-bg;
+
+  p {
+    margin: 0;
+  }
+  @include tablet {
+  }
+  @include laptop {
+    position: absolute;
+    top: 90%;
+    left: 3%;
+  }
+}
+.close {
+  display: none;
+}
+
+.button {
+  display: none;
+  @include tablet {
+    display: block;
+  }
+}
+
+.btn {
+  display: none;
+  @include tablet {
+    display: flex;
+    padding: 12px 24px;
+    border: 1px solid $primary-text-white;
+    background: none;
+    border-radius: 30px;
+    color: white;
+  }
+  @include laptop {
+    padding: 16px 32px;
+  }
+}

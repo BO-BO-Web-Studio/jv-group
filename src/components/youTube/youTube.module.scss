@@ -1,0 +1,179 @@
+@import "src/styles/variables";
+@import "src/styles/_mixins.scss";
+
+.youTube {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: $primary-bg;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 328px;
+  margin: 100px 0;
+  @include tablet {
+    width: 592px;
+  }
+  @include laptop {
+    width: 1200px;
+    margin-bottom: 100px;
+
+  }
+}
+
+.h5 {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 600;
+  color: $secondary-text-blue;
+  margin: 0;
+  @include tablet {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @include laptop {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.h1 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28px;
+  margin: 4px 0 16px;
+  @include tablet {
+    font-size: 32px;
+    line-height: 38px;
+    margin: 8px 0 20px;
+  }
+  @include laptop {
+    font-size: 40px;
+    line-height: 48px;
+    margin: 8px 0 40px;
+  }
+}
+
+.flex {
+  @include tablet {
+  }
+  @include laptop {
+    display: flex;
+  }
+}
+
+.video {
+  margin-bottom: 10px;
+  @include laptop {
+    margin: 0;
+  }
+}
+
+.videoImg {
+  width: 328px;
+  @include tablet {
+    width: 592px;
+  }
+  @include laptop {
+    width: 588px;
+  }
+}
+
+.choice {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: 100%;
+  @include tablet {
+  }
+  @include laptop {
+    margin-left: 100px;
+
+  }
+}
+
+.text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid white;
+  margin-bottom: 16px;
+  padding-bottom: 6px;
+  width: 100%;
+  @include tablet {
+    margin-bottom: 21px;
+    padding-bottom: 9px;
+  }
+  @include laptop {
+    width: 510px;
+    margin-bottom: 30px;
+  }
+}
+
+.paragraphs {
+  display: flex;
+  gap: 10px;
+  @include tablet {
+    gap: 30px;
+  }
+}
+
+.paragraph {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  margin: 0;
+  @include tablet {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  background: $secondary-bg;
+  border-radius: 100%;
+
+  @include tablet {
+    padding: 12px;
+  }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: end;
+  font-size: 14px;
+  white-space: nowrap;
+  color: white;
+  background: none;
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 12px 24px;
+  width: 169px;
+  margin: 10px 0 0 0;
+  img {
+    padding-left: 16px;
+    width: 20px;
+  }
+
+  @include tablet {
+    padding: 16px 32px;
+    width: 185px;
+    img {
+      width: auto;
+    }
+  }
+  @include laptop {
+    width: 212px;
+    font-size: 16px;
+  }
+}
