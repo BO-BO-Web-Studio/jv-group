@@ -55,7 +55,7 @@ function Project() {
                 <div>
                   <img
                     className={classes.width}
-                    src="/assets/img/project-lift1.jpg"
+                    src="/assets/img/project1.jpg"
                     alt=""
                   />
                   <p className={classes.slideP}>Название проекта</p>
@@ -64,7 +64,7 @@ function Project() {
               <SwiperSlide>
                 <img
                   className={classes.width}
-                  src="/assets/img/project-lift2.jpg"
+                  src="/assets/img/project2.jpg"
                   alt=""
                 />
                 <p className={classes.slideP}>Название проекта</p>
@@ -72,7 +72,7 @@ function Project() {
               <SwiperSlide>
                 <img
                   className={classes.width}
-                  src="/assets/img/project-lift3.jpg"
+                  src="/assets/img/project3.jpg"
                   alt=""
                 />
                 <p className={classes.slideP}>Название проекта</p>
@@ -80,7 +80,31 @@ function Project() {
               <SwiperSlide>
                 <img
                   className={classes.width}
-                  src="/assets/img/project-lift2.jpg"
+                  src="/assets/img/project4.jpg"
+                  alt=""
+                />
+                <p className={classes.slideP}>Название проекта</p>
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  className={classes.width}
+                  src="/assets/img/project5.jpg"
+                  alt=""
+                />
+                <p className={classes.slideP}>Название проекта</p>
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  className={classes.width}
+                  src="/assets/img/project6.jpg"
+                  alt=""
+                />
+                <p className={classes.slideP}>Название проекта</p>
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  className={classes.width}
+                  src="/assets/img/project7.jpg"
                   alt=""
                 />
                 <p className={classes.slideP}>Название проекта</p>

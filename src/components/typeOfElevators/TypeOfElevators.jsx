@@ -229,7 +229,7 @@ function TypeOfElevators() {
     },
   ];
   const [active, setActive] = useState("cabins");
-  const [activeSlide, setActiveSlide] = useState(myProducts[0])
+  const [activeSlide, setActiveSlide] = useState(myProducts[0]);
   const [products, setProducts] = useState([myProducts]);
   const [activeImage, setActiveImage] = useState(myProducts[0].img);
 
@@ -241,13 +241,13 @@ function TypeOfElevators() {
   }
 
   useEffect(() => {
-    handleClick(active)
+    handleClick(active);
     // setActiveSlide(products[0][0])
-  }, [active])
+  }, [active]);
 
   const handleClickImage = (product) => () => {
     setActiveImage(product.img);
-    setActiveSlide(product)
+    setActiveSlide(product);
   };
 
   return (
@@ -276,12 +276,16 @@ function TypeOfElevators() {
         <div className={classes.main}>
           <div className={classes.info}>
             <div className={classes.block}>
-            <div>
-              <div className={classes.title}>
-                {activeSlide.title2 && <h5 className={classes.h5}>{activeSlide.title2}</h5>}
-                {activeSlide.text && <p className={classes.paragraph2}>{activeSlide.text}</p>}
+              <div>
+                <div className={classes.title}>
+                  {activeSlide.title2 && (
+                    <h5 className={classes.h5}>{activeSlide.title2}</h5>
+                  )}
+                  {activeSlide.text && (
+                    <p className={classes.paragraph2}>{activeSlide.text}</p>
+                  )}
+                </div>
               </div>
-            </div>
             </div>
             <Swiper
               slidesPerView={2}
@@ -330,13 +334,14 @@ function TypeOfElevators() {
           </div>
           <div className={classes.formLift}>
             <div className={classes.blockMobail}>
-              {products.map((product) => (
-                <div className={classes.title}>
-                  <h5 className={classes.h5Mobail}>{product.title2}</h5>
-                  <p className={classes.paragraphMobail}>{product.text}</p>
-                </div>
-              ))}
-
+              <div className={classes.title}>
+                {activeSlide.title2 && (
+                  <h5 className={classes.h5}>{activeSlide.title2}</h5>
+                )}
+                {activeSlide.text && (
+                  <p className={classes.paragraph2}>{activeSlide.text}</p>
+                )}
+              </div>
               <button className={classes.buttonMobail}>Оставить заявку</button>
             </div>
             <div className={classes.elevators}>

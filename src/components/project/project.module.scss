@@ -120,11 +120,14 @@
   border-radius: 10px;
   border: 2px;
   width: 156px;
+  height: 150px;
   @include tablet {
     width: 229px;
+    height: 200px;
   }
   @include laptop {
     width: 274px;
+    height: 267px;
   }
 }
 
