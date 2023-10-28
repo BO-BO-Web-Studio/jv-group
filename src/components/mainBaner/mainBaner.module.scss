@@ -6,10 +6,10 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-image: url("../../../public/assets/img/bg-main.png");
+  background-image: url("../../../public/assets/img/bg-main.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center bottom;
   padding-top: 77px;
   @include tablet{
     padding-top: 105px;

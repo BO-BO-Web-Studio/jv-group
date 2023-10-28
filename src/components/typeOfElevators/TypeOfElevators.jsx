@@ -18,7 +18,14 @@ function TypeOfElevators() {
     { key: "doors", name: "Двери" },
     { key: "buttons", name: "Кнопки" },
   ];
-  const myProducts = [
+  const myProducts = [    {
+    id: 4,
+    title: "XTQ01-001",
+    title2: "Ceiling:",
+    img: "/assets/img/cabins4.jpg",
+    text: "  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo",
+    category: "cabins",
+  },
     {
       id: 1,
       title: "XTQ01-001",
@@ -43,14 +50,7 @@ function TypeOfElevators() {
       text: " Mc L Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo",
       category: "cabins",
     },
-    {
-      id: 4,
-      title: "XTQ01-001",
-      title2: "Ceiling:",
-      img: "/assets/img/cabins4.png",
-      text: "  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo",
-      category: "cabins",
-    },
+
     {
       id: 5,
       title: "XTQ01-001",

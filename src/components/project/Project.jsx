@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./project.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -9,23 +9,63 @@ import "swiper/css/navigation";
 import { FreeMode, Pagination, Navigation } from "swiper/modules";
 
 function Project() {
+  const projects = [
+    {
+      id: 1,
+      name: "Бустон Сити",
+      img: "/assets/img/project1.jpg",
+      text: "Компания открылась 2018 году. Занимаемся продажей и Установкойлифтов и эскалаторов. Имеет свой Сервис центр который обслуживаетвсех видов лифтов. Наши сотрудники Квалифицированные инженеры. Работаем со всеми мировыми брендами. Продали около 200 лифтов. Официальные представители компании Save Elevator (XIZI) и Larson в средней азии. Агенты компании Schindler в Таджикистане.",
+    },
+    {
+      id: 2,
+      name: "Хоризон",
+      img: "/assets/img/project2.jpg",
+      text: "Компания открылась 2018 году. Занимаемся продажей и Установкойлифтов и эскалаторов. Имеет свой Сервис центр который обслуживаетвсех видов лифтов. Наши сотрудники Квалифицированные инженеры. Работаем со всеми мировыми брендами. Продали около 200 лифтов. Официальные представители компании Save Elevator (XIZI) и Larson в средней азии. Агенты компании Schindler в Таджикистане.",
+    },
+    {
+      id: 3,
+      name: "Название проекта",
+      img: "/assets/img/project3.jpg",
+      text: "Компания открылась 2018 году. Занимаемся продажей и Установкойлифтов и эскалаторов. Имеет свой Сервис центр который обслуживаетвсех видов лифтов. Наши сотрудники Квалифицированные инженеры. Работаем со всеми мировыми брендами. Продали около 200 лифтов. Официальные представители компании Save Elevator (XIZI) и Larson в средней азии. Агенты компании Schindler в Таджикистане.",
+    },
+    {
+      id: 4,
+      name: "Название проекта",
+      img: "/assets/img/project4.jpg",
+      text: "Компания открылась 2018 году. Занимаемся продажей и Установкойлифтов и эскалаторов. Имеет свой Сервис центр который обслуживаетвсех видов лифтов. Наши сотрудники Квалифицированные инженеры. Работаем со всеми мировыми брендами. Продали около 200 лифтов. Официальные представители компании Save Elevator (XIZI) и Larson в средней азии. Агенты компании Schindler в Таджикистане.",
+    },
+    {
+      id: 5,
+      name: "Название проекта",
+      img: "/assets/img/project5.jpg",
+      text: "Компания открылась 2018 году. Занимаемся продажей и Установкойлифтов и эскалаторов. Имеет свой Сервис центр который обслуживаетвсех видов лифтов. Наши сотрудники Квалифицированные инженеры. Работаем со всеми мировыми брендами. Продали около 200 лифтов. Официальные представители компании Save Elevator (XIZI) и Larson в средней азии. Агенты компании Schindler в Таджикистане.",
+    },
+    { id: 6, name: "Название проекта", img: "/assets/img/project6.jpg" },
+    {
+      id: 7,
+      name: "Название проекта",
+      img: "/assets/img/project7.jpg",
+      text: "Компания открылась 2018 году. Занимаемся продажей и Установкойлифтов и эскалаторов. Имеет свой Сервис центр который обслуживаетвсех видов лифтов. Наши сотрудники Квалифицированные инженеры. Работаем со всеми мировыми брендами. Продали около 200 лифтов. Официальные представители компании Save Elevator (XIZI) и Larson в средней азии. Агенты компании Schindler в Таджикистане.",
+    },
+  ];
+  const [activeSlide, setActiveSlide] = useState(projects[0]);
+
+  const handleClickImage = (project) => () => {
+    setActiveSlide(project);
+  };
   return (
     <div id="projects" className={classes.project}>
       <div className={classes.wrapper}>
         <h5 className={classes.h5}>Наши проекты</h5>
         <div className={classes.near}>
           <div className={classes.text}>
-            <h1 className={classes.h1}>
-              Название выбранного актуального проекта
-            </h1>
-            <p className={classes.paragraph}>
-              Компания открылась 2018 году. Занимаемся продажей и Установкой
-              лифтов и эскалаторов. Имеет свой Сервис центр который обслуживает
-              всех видов лифтов. Наши сотрудники Квалифицированные инженеры.
-              Работаем со всеми мировыми брендами. Продали около 200 лифтов.
-              Официальные представители компании Save Elevator (XIZI) и Larson в
-              средней азии. Агенты компании Schindler в Таджикистане.
-            </p>
+            {activeSlide.name && (
+              <h1 className={classes.h1}>{activeSlide.name} </h1>
+            )}
+
+            {activeSlide.text && (
+              <p className={classes.paragraph}>{activeSlide.text}</p>
+            )}
           </div>
           <div className={classes.swiper}>
             <Swiper
@@ -51,64 +91,14 @@ function Project() {
               }}
               className={classes.mySwiper}
             >
-              <SwiperSlide>
-                <div>
-                  <img
-                    className={classes.width}
-                    src="/assets/img/project1.jpg"
-                    alt=""
-                  />
-                  <p className={classes.slideP}>Название проекта</p>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  className={classes.width}
-                  src="/assets/img/project2.jpg"
-                  alt=""
-                />
-                <p className={classes.slideP}>Название проекта</p>
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  className={classes.width}
-                  src="/assets/img/project3.jpg"
-                  alt=""
-                />
-                <p className={classes.slideP}>Название проекта</p>
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  className={classes.width}
-                  src="/assets/img/project4.jpg"
-                  alt=""
-                />
-                <p className={classes.slideP}>Название проекта</p>
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  className={classes.width}
-                  src="/assets/img/project5.jpg"
-                  alt=""
-                />
-                <p className={classes.slideP}>Название проекта</p>
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  className={classes.width}
-                  src="/assets/img/project6.jpg"
-                  alt=""
-                />
-                <p className={classes.slideP}>Название проекта</p>
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  className={classes.width}
-                  src="/assets/img/project7.jpg"
-                  alt=""
-                />
-                <p className={classes.slideP}>Название проекта</p>
-              </SwiperSlide>
+              {projects.map((project) => (
+                <SwiperSlide onClick={handleClickImage(project)}>
+                  <div>
+                    <img className={classes.width} src={project.img} alt="" />
+                    <p className={classes.slideP}>{project.name}</p>
+                  </div>
+                </SwiperSlide>
+              ))}
             </Swiper>
           </div>
         </div>
